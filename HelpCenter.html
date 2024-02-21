@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/productpage.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://static.meeshosupply.com/web/meesho-logo-fav.png">
+    <link rel="stylesheet" href="./css/homePage.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <title>Help Center | Meesho</title>
+</head>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <section class="navbar">
+      <div class="uppernav">
+        <a href="index.html"><img
+          src="https://cdn.hevodata.com/customer/logo/8c76f62bd88177a78bb6e2810a244446.png"
+          alt="logo"
+          class="logo"
+        /></a>
+        <div class="navRightSec">
+          <a href="HelpCenter.html" >Help Center
+          </a>
+          <div class="navAppPromo">
+            <img
+              src="https://i.postimg.cc/sXqr2Fz4/smartphone.png"
+              alt="app"
+              class="navAppIcon"
+            />
+            <div class="dropdown">
+  
+              <span id="tagDwn">Download App</span>
+              <div class="dropdown-content">
+                <a href="https://play.google.com/store/apps/details?id=com.meesho.supply" >Download from Google Play
+                </a>
+
+                <a  href="https://apps.apple.com/us/app/meesho/id1457958492">Download from Apple Store
+                </a>
+              </div>
+            </div>
+          </div>
+          <style>
+            .dropdown-content a:hover {background-color: #ff488b;}
+          </style>
+          <span class="navSuplier" onclick="window.location.href='becomeseller.html'">Become a Supplier</span>
+          
+          <div class="navProfile" onclick="window.location.href='SignUpPage.html'">
+            <img
+              src="https://i.postimg.cc/wjtLkcVz/user.png"
+              alt="account"
+              class="navAccountIcon"
+            />
+            <div class="dropdown">
+  
+              <span id="tagDwn">Profile</span>
+              <div class="dropdown-content">
+                <a href="SignUpPage.html">Sign Up</a>
+                <a href="myorders.html">My Orders</a>
+              </div>
+            </div>
+            
+          </div>
+          <style>
+             .dropdown-content a:hover {background-color: #ff488b;}
+          </style>
+          <div class="wishlist">
+            <img
+              src="https://icons.veryicon.com/png/o/commerce-shopping/fine-edition-mall-icon/wishlist-1.png"
+              alt="wish"
+              class="wishlistIcon"
+            />
+            <span
+              class="SignUpHover"
+              >Wishlist</span
+            >
+          </div>
+          <div class="navcart" onclick="window.location.href='CartPage.html'">
+            <img
+              src="https://i.postimg.cc/sXBgkwMf/bag.png"
+              alt="cart"
+              class="cartIcon"
+            />
+            <span
+              class="SignUpHover"
+              onclick="window.location.href='CartPage.html'"
+              >Cart</span
+            >
+          </div>
+          <div id="cart-item-counter">0</div>
+        </div>
+      </div>
+      <div class="bottomNav">
+        <div class="nav-menu">
+          
+          <ul>
+            <div class="navSearch">
+              <img
+                src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png"
+                alt="search"
+                class="NavSearchIcon"
+              />
+              <input
+                type="text"
+                id="keyword"
+                class="searchContainer"
+                placeholder="Try Saree,Kurti or Seach by Product Code"
+                onkeypress="handleKeyPress(event)"
+              />
+            </div>
+            <li class="dropdown" onclick="window.location.href='viewall.html'">View All</li>
+            <li class="dropdown" onclick="window.location.href='WomenWestern.html'">Women
+              <div class="submenu">
+                <div class="subCat">
+                  <span class="catHeading">Ethnic</span>
+                  <span>Sarees</span>
+                  <span>Kurtis</span>
+                  <span>Kurta Sets</span>
+                  <span>Suits</span>
+                </div>
+                <div class="subCat">
+                  <span class="catHeading">Western</span>
+                  <span>Dresses</span>
+                  <span>Tops</span>
+                  <span>Sweaters</span>
+                  <span>Jumpsuits</span>
+                  <span>Jeans</span>
+                  <span>Jeggings</span>
+                  <span>Palazzos</span>
+                  <span>Shorts</span>
+                  <span>Skirts</span>
+                </div>
+              </div>
+            </li>
+            <li onclick="window.location.href='Men.html'">Men</li>
+            <li>Kids</li>
+            <li onclick="window.location.href='Jewellery.html'">Jewellery & Accessories</li>
+            <li>Home & Living</li>
+            <li>Beauty</li>
+            <li>Electronics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="searchWindow">
+      <div class="searchCloseBtn">
+        <img src="https://i.postimg.cc/Lgdct409/close.png" alt="">
+      </div>
+      <div id="searchWindowDiv">
+        
+      </div>
+    </section>
+    <section class="searchWindow">
+      <div class="searchCloseBtn">
+        <img src="https://i.postimg.cc/Lgdct409/close.png" alt="">
+      </div>
+      <div id="searchWindowDiv">
+        
+      </div>
+    </section>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        
+        h1 {
+          font-size: 36px;
+          margin-top: 40px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        
+        h2 {
+          font-size: 24px;
+          margin-top: 40px;
+          margin-bottom: 10px;
+        }
+        
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        
+        li {
+          margin-bottom: 20px;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 20px;
+        }
+        
+        h3 {
+          font-size: 18px;
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+        
+        p {
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+        
+        a {
+          color: #0077cc;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          text-decoration: underline;
+        }
+        
+        .contact {
+          margin-top: 40px;
+          border-top: 1px solid #ddd;
+          padding-top: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Help Center</h1>
+      
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li>
+          <h3>How can I place an order?</h3>
+          <p>To place an order, simply select the item you want to purchase and add it to your cart. Then, proceed to checkout and enter your shipping and payment information.</p>
+        </li>
+        <li>
+          <h3>What payment methods do you accept?</h3>
+          <p>We accept Cash On Delivery.</p>
+        </li>
+        <li>
+          <h3>How long will it take for my order to arrive?</h3>
+          <p>Delivery times vary depending on your location and the shipping method you choose. You can view estimated delivery times during checkout.</p>
+        </li>
+        <li>
+          <h3>What is your return policy?</h3>
+          <p>We accept returns within 7 days of delivery for items that are unused and in their original packaging. Please <a href="#">contact us</a> to initiate a return.</p>
+        </li>
+        <li>
+            <h3>How will i get my refund if the original payment method is COD?</h3>
+            <p>After we verify the returend product you will get temporary genetrated link on sms, clink on that link to add your bank account details or UPI ID. We will im</p>
+          </li>
+      </ul>
+      
+      <div class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any further questions or concerns, please don't hesitate to <a href="#">contact us</a>:</p>
+        <ul>
+          <li>Email: <a href="mailto:support@your-ecommerce-website.com">support@your-ecommerce-website.com</a></li>
+          <li>Phone: 1-800-123-4567</li>
+          <li>Live chat: click the chat icon in the bottom right corner of your screen</li>
+        </ul>
+      </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div>
+            <h2>Shop Non-Stop on Meesho</h2>
+            <br>
+            <p>Trusted by more than 1 Crore Indians
+             Cash on Delivery | Free Delivery</p>
+        </div>
+        <div>
+            <a href="">Careers</a>
+            <a href="">Become a supplier</a>
+        </div>
+        <div>
+            <a href="">Legal And Policies</a>
+            <a href="">Meesho Tech Blog</a>
+        </div>
+        <div>
+            <a href=""><h3>Contact Us</h3></a>
+            <a href="">query@meesho.com</a>
+        </div>
+        <div>
+            <a href="">Reach out to us</a>
+            <img src="https://meesho.com/assets/facebook.png" alt="">
+            <img src="https://meesho.com/assets/instagram.png" alt="">
+            <img src="https://meesho.com/assets/youtube.png" alt="">
+            <img src="https://meesho.com/assets/linkedin.png" alt="">
+            <img src="https://meesho.com/assets/twitter.png" alt="">
+        </div>
+      </div>
+      <style>
+  
+        h2{
+          margin-top: 20px;
+          font-size: 30px;
+        }
+        p{
+          font-size: 18px;
+        }
+      </style> 
+  </body>
